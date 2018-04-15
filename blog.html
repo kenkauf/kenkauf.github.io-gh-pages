@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="photos/fav.JPG"/>
+  <title>Blog</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="Site" id="bgImg">
+  <div class="wrapper">
+    <header>
+      <nav>
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <div class="logo">
+          <a href="./index.html"><img src="photos/fav.JPG" alt="four circles"></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./index.html">PROJECTS</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li id="current"><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1>Blog</h1>
+  </div>
+<!--   blog content -->
+  <div class="col-lg-12 Site-content">
+      <h2>Welcome to my brain.</h2>
+        <p>Since middle school I've been writing stories and making comics. In high school, I began writing memiors and articles in my local newspaper. In college, I coupled writing with my music to create songs and music. For me, writing is not only a hobby, but an outlet to express my ideas. <br><br> Here you can find links to my writings. They vary from creative to opion pieces. One of my favorite pieces, linked belowed, is an autobiography I wrote using my Facebook page as the only reference into my life. This piece captures how we display ourselves on social media; who am I if I'm only represented by my social media? Other pieces discuss current tech trends and ethics. COMING SOON!
+        </p>
+  </div>
+
+
+
+
+
+
+
+  <script>
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+
+
+    </script>
+  <footer id="footer">
+    <h3 class="col-lg-4">Kennedy Kaufman</h3>
+    <h3 class="col-lg-4" id="mailto"><a href="mailto:kenkauf@umich.edu">  kenkauf@umich.edu</a></h3>
+      <a href="https://www.facebook.com/kennedy.kaufman" class="fa fa-facebook col-lg-4" aria-label="Facebook" title="link to facebook"></a>
+      <a href="https://www.linkedin.com/in/kennedy-kaufman/" class="fa fa-linkedin col-lg-4" aria-label="LinkedIn" title="link to linkedin"></a>
+  </footer>
+</body>
+</html>

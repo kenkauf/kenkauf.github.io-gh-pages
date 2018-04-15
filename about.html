@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="photos/fav.JPG"/>
+  <title>About Me</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="Site">
+  <div class="wrapper">
+    <header>
+      <nav>
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <div class="logo">
+          <a href="./index.html"><img src="photos/fav.JPG" alt="four circles"></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./index.html">PROJECTS</a></li>
+            <li id="current"><a href="./about.html">ABOUT</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1>Who is Ken?</h1>
+  </div>
+	<div class="Site-content">
+    	<h2>Everyone has a story... here's mine.</h2>
+      <div class="fadein col-lg-6 col-sm-12 col-md-12">
+        <img src="photos/mensis.jpg" alt="me at sister wedding">
+        <img src="photos/workshop2.jpg" alt="overseeing my design studio">
+        <img src="photos/menaud.jpg" alt="me at concert">
+        <img src="photos/dfa_lead.jpg" alt="me presenting workshop">
+        <img src="photos/travel.jpg" alt="me in Posatino, Italy">
+        <img src="photos/mendogge.jpg" alt="dog and me smilin">
+        <img src="photos/peak.jpg" alt="me peak in Edinburgh">
+      </div>
+
+    	<p id="cont_p"> I grew up in a tiny town tucked away on Lake Michigan. From an early age, I played guitar and developed a passion for music. To satisfy my creativity, I wrote music and DJ'd parties. Mentored by my father, I observed as he built his business from the ground up. Watching this process taught me strategic business practices and the power of empathetic leadership.<br><br>When college arrived, I imagined my future embodying passion, creation, and empathy. As a senior at the University of Michigan's School of Information, I'm finishing my studies on User Experience Design and Research in April. Technology evolves radically and as a designer, I realize the importance of empowering the end user. Let me help make your users' lives easier. Hope you enjoy my site, please reach out if want to learn more. Cheers! </p>
+  </div>
+
+
+
+
+
+
+
+  <script>
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+
+          // SLideshow o  https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+      $(function(){
+        $('.fadein img:gt(0)').hide();
+        setInterval(function(){
+          $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');
+       }, 6000);
+      });
+
+  </script>
+  <footer id="footer">
+    <h3 class="col-lg-4">Kennedy Kaufman</h3>
+    <h3 class="col-lg-4" id="mailto"><a href="mailto:kenkauf@umich.edu">  kenkauf@umich.edu</a></h3>
+      <a href="https://www.facebook.com/kennedy.kaufman" class="fa fa-facebook col-lg-4" aria-label="Facebook" title="link to facebook"></a>
+      <a href="https://www.linkedin.com/in/kennedy-kaufman/" class="fa fa-linkedin col-lg-4" aria-label="LinkedIn" title="link to linkedin"></a>
+  </footer>
+</body>
+</html>
